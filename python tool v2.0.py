@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import tkinter as tk
 from tkinter import filedialog, scrolledtext, messagebox
 import subprocess
@@ -22,7 +23,7 @@ except AttributeError:
 class UVToolApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("UV 脚本运行与打包工具 V2.0")
+        self.root.title("Python 脚本运行与打包工具 V2.0")
         self.root.geometry("750x550")
         
         # --- 变量区 ---
@@ -50,11 +51,11 @@ class UVToolApp:
         btn_frame = tk.Frame(root)
         btn_frame.pack(pady=10)
         
-        self.run_btn = tk.Button(btn_frame, text="▶ 运行脚本 (Run)", bg="#4CAF50", fg="white", 
+        self.run_btn = tk.Button(btn_frame, text="? 运行脚本 (Run)", bg="#4CAF50", fg="white", 
                                  font=("Microsoft YaHei", 10, "bold"), width=20, command=self.run_script)
         self.run_btn.pack(side=tk.LEFT, padx=20)
         
-        self.pack_btn = tk.Button(btn_frame, text="📦 打包为 EXE", bg="#2196F3", fg="white", 
+        self.pack_btn = tk.Button(btn_frame, text="? 打包为 EXE", bg="#2196F3", fg="white", 
                                   font=("Microsoft YaHei", 10, "bold"), width=20, command=self.pack_exe)
         self.pack_btn.pack(side=tk.LEFT, padx=20)
         
